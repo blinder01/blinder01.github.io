@@ -1,5 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<script>
+  //automatic slideshow -change every 3 seconds//
+var myIndex = 0;
+carousel1();
+function carousel1() {
+  var i;
+  var x = document.getElementsByClassName("wideSlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
+</script>
+
 <header>
 <meta charset="UTF-8">
 <style>
@@ -42,8 +60,18 @@
 <p>
     <br>
     <div>
-  <img src="Studio a pics 2.jpg" alt="Cinque Terre" width="4928">
-  </div>
+      <img class="tallSlides" src="Studio 2 Pics 1.jpg"
+      style="width:100%">
+      <img class="tallSlides" src="Studio 2 Pics 2.jpg"
+      style="width:100%">
+      <img class="tallSlides" src="Studio C pic 1.jpg"
+      style="width:100%">
+      <img class="tallSlides" src="Studio A pics 1.jpg"
+      style="width:100%">
+      <img class="tallSlides" src="Studio a pics 2.jpg"
+      style="width:100%">
+      <img class="tallSlides" src="Studio a pics 3.jpg" 
+    </div>
 </p>
 </html>
 <h3>
