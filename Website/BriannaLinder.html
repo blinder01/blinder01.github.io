@@ -1,26 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<script>
-  //automatic slideshow -change every 3 seconds//
-var myIndex = 0;
-carousel1();
-function carousel1() {
-  var i;
-  var x = document.getElementsByClassName("wideSlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}
-  x[myIndex-1].style.display = "block";
-  setTimeout(carousel, 3000);
-}
-</script>
-
 <header>
 <meta charset="UTF-8">
+<meta name="viewport" content=""width=device-width, initial-scale="1">
 <style>
+  * {box-sizing: border-box}
+  body {font-family: Verdana, sans-serif; margin:0}
+  .mySlides {display: none}
+  img {vertical-align: middle;}
   body {
     background-color: rgb(235, 251, 144);
   }
@@ -31,6 +18,7 @@ function carousel1() {
     font-size: 60px;
   }
   img {
+    vertical-align: middle;
     max-width: 100%;
     height: auto;
   }
@@ -51,30 +39,145 @@ function carousel1() {
     text-align: center;
     font-size: 20px;
   }
+  /* Slideshow container*/
+  .slideshow-containter {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  /* next & previous buttons*/
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  /* position "next button" to right side*/
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  /* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+/* number text 1/6 */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+/* dot indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color:#717171;
+}
+
 </style>
 <p>Brianna Linder</p>
 <p><h1><i>Audio Engineer, Sound Designer, Mixer</i></h1></p>
 </header>
 <hr />
+<body>
+
+<div class="slideshow-containter">
+
+<div class="mySlides fade">
+    <div class="numbertext">1 / 6</div>
+    <img src="Studio 2 Pics 1.jpg" style="width:100%">
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">2 / 6</div>
+  <img src="Studio 2 Pics 2.jpg" style="width:100%">
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">3 / 6</div>
+  <img src="Studio C pic 1.jpg" style="width:100%">
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">4 / 6</div>
+  <img src="Studio A pics 1.jpg" style="width:100%">
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">5 / 6</div>
+  <img src="Studio a pics 2.jpg" style="width:100%">
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">6 / 6</div>
+  <img src="Studio a pics 3.jpg" style="width:100%">
+</div>
+
+<a class="prev" onclock="plusSlides(-1)"></a>
+<a class="prev" onclock="plusSlides(1)"></a>
+
+</div>
+<br>
+
+<div style="text-alight:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+</div>
+
 <h2>enter bio here</h2>
-<p>
-    <br>
-    <div>
-      <img class="tallSlides" src="Studio 2 Pics 1.jpg"
-      style="width:100%">
-      <img class="tallSlides" src="Studio 2 Pics 2.jpg"
-      style="width:100%">
-      <img class="tallSlides" src="Studio C pic 1.jpg"
-      style="width:100%">
-      <img class="tallSlides" src="Studio A pics 1.jpg"
-      style="width:100%">
-      <img class="tallSlides" src="Studio a pics 2.jpg"
-      style="width:100%">
-      <img class="tallSlides" src="Studio a pics 3.jpg" 
-    </div>
-</p>
-</html>
 <h3>
 <a href="https://orteil.dashnet.org/cookieclicker/"> Contact</a>
 </h3>
 
+<script>
+  //automatic slideshow -change every 3 seconds//
+  let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</body>
+</html>
