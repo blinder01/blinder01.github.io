@@ -8,10 +8,10 @@ header {
   padding-top: 30px;
 }
 body {
-  #grad {
-    background-image: linear-gradient(to top right, rgb(251,250,218), rgb(119, 180, 140));
-  }
   font-family: Verdana, sans-serif; margin:0
+}
+#grad {
+  background-image: linear-gradient(to top right, rgb(251,250,218), rgb(119, 180, 140));
 }
 
 .mySlides {display: none}
