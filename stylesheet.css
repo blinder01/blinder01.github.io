@@ -1,6 +1,10 @@
 style
 * {box-sizing: border-box}
-  body {font-family: Verdana, sans-serif; margin:0}
+  body {
+    font-family: Verdana, sans-serif; margin:0
+    background-color: rgb(235, 251, 144);
+    text-align: center;
+  }
   .mySlides {display: none}
   img {vertical-align: middle;}
   video {
@@ -9,11 +13,6 @@ style
     margin-left: auto;
     max-width: 100%;
     height: auto;s
-  }
-  
-  body {
-    background-color: rgb(235, 251, 144);
-    text-align: center;
   }
   header{
     background-color: rgb(18,55,42);
