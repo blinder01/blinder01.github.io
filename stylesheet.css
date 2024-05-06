@@ -116,18 +116,9 @@ h2, h3 {
   color: rgb(67,104,80);
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-right: 300px;
-  margin-left: 300px;
+  margin-right: 200px;
+  margin-left: 200px;
   text-align: center;
   font-size: 15px;
 }
 
-h4 {
-  color: rgb(67,104,80);
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-right: 100px;
-  margin-left: 700px;
-  text-align: left;
-  font-size: 15px;
-}
