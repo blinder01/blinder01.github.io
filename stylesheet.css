@@ -13,6 +13,7 @@ body {
 }
 
 audio {
+  position: center;
   margin-right: auto;
   margin-left: auto;
   padding-bottom: 40px;
