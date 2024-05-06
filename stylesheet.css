@@ -13,11 +13,8 @@ body {
 }
 
 audio {
-  display: block;
   margin-right: auto;
   margin-left: auto;
-  max-width: 100%;
-  height: auto;
   padding-bottom: 40px;
 }
 .mySlides {display: none}
