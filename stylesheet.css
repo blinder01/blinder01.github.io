@@ -12,6 +12,14 @@ body {
   font-family: Verdana, sans-serif; margin:0
 }
 
+audio {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
+  height: auto;
+  padding-bottom: 40px;
+}
 .mySlides {display: none}
 img {vertical-align: middle;}
 /* Slideshow container*/
