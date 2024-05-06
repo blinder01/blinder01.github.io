@@ -8,9 +8,12 @@ header {
   padding-top: 30px;
 }
 body {
-  background-color: rgb(251,250,218);
+  #grad {
+    background-image: linear-gradient(to top right, rgb(251,250,218), rgb(119, 180, 140));
+  }
   font-family: Verdana, sans-serif; margin:0
 }
+
 .mySlides {display: none}
 img {vertical-align: middle;}
 /* Slideshow container*/
