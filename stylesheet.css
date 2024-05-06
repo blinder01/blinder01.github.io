@@ -8,32 +8,6 @@ body {
   background-color: rgb(251,250,218);
   font-family: Verdana, sans-serif; margin:0
 }
-video {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 100%;
-  height: auto;
-}
-img {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 100%;
-  height: auto;
-}
-h1 {
-  color: rgb(251,250,218);
-  text-align: center;
-  font-size: 20px;
-}
-
-h2, h3 {
-  color: rgb(67,104,80);
-  text-align: center;
-  font-size: 15px;
-}
-
 .mySlides {display: none}
 img {vertical-align: middle;}
 /* Slideshow container*/
@@ -105,3 +79,29 @@ img {vertical-align: middle;}
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
 }
+video {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
+  height: auto;
+}
+img {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
+  height: auto;
+}
+h1 {
+  color: rgb(251,250,218);
+  text-align: center;
+  font-size: 20px;
+}
+
+h2, h3 {
+  color: rgb(67,104,80);
+  text-align: center;
+  font-size: 15px;
+}
+
