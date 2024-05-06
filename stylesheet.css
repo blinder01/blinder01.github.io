@@ -83,6 +83,7 @@ img {vertical-align: middle;}
   .text {font-size: 11px}
 }
 audio {
+  display: block;
   position: right;
   margin-right: auto;
   margin-left: auto;
